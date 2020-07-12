@@ -1,9 +1,25 @@
-FROM jupyter/minimal-notebook
+FROM jupyter/scipy-notebook
 
-# Add RUN statements to install packages as the $NB_USER defined in the base images.
+LABEL maintainer="Mark Dean <mdean@bnl.gov>"
 
-# Add a "USER root" statement followed by RUN statements to install system packages using apt-get,
-# change file permissions, etc.
+# pytables shoudl be included upstream
+RUN conda install --quiet --yes \
+    fabio \
+    lmfit \
+    numdifftools \
+    phonopy \
+    pybroom \
+    pyfai \
+    pymatgen \
+    pymca \
+    pytables \
+    scikit-image \
+    seekpath \
+    silx \
+    xrayutilities
 
-# If you do switch to root, always be sure to add a "USER $NB_USER" command at the end of the
-# file to ensure the image runs as a unprivileged user by default.
+RUN pip install \
+  git+https://github.com/scikit-beam/scikit-beam.git \
+  git+https://github.com/mpmdean/h5file.git \
+  git+https://github.com/mpmdean/pymcaspec.git \
+  git+https://github.com/mpmdean/fitting_functions.git
