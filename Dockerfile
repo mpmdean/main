@@ -27,4 +27,4 @@ RUN pip install \
   git+git://github.com/scikit-beam/scikit-beam.git@v0.0.22 \
   git+git://github.com/mpmdean/h5file.git@v0.1 \
   git+git://github.com/mpmdean/pymcaspec.git@v0.1 \
-  git+git://github.com/mpmdean/fitting_functions@e81d4893e6c49e73ad36604a018af47a7cee6d22
+  git+git://github.com/mpmdean/fitting_functions@6c094eac3d4cd95419c498d84ea7253363db8b95
