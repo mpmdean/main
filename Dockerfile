@@ -26,4 +26,5 @@ RUN pip install 'pymca==5.5.*'
 RUN pip install \
   git+git://github.com/scikit-beam/scikit-beam.git@v0.0.22 \
   git+git://github.com/mpmdean/h5file.git@v0.1 \
-  git+git://github.com/mpmdean/pymcaspec.git@v0.1
+  git+git://github.com/mpmdean/pymcaspec.git@v0.1 \
+  git+git://github.com/mpmdean/fitting_functions@v0.1
