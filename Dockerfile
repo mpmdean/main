@@ -17,7 +17,7 @@ RUN conda install --quiet --yes \
 # pymcaspec needs mesa-common-dev
 USER root
 RUN apt update
-RUN apt-get install -y mesa-common-dev
+RUN apt-get install -y --no-install-recommends mesa-common-dev
 USER $NB_UID
 RUN pip install 'pymca==5.5.*'
 
@@ -27,4 +27,4 @@ RUN pip install \
   git+git://github.com/scikit-beam/scikit-beam.git@v0.0.22 \
   git+git://github.com/mpmdean/h5file.git@v0.1 \
   git+git://github.com/mpmdean/pymcaspec.git@v0.1 \
-  git+git://github.com/mpmdean/fitting_functions@e5173bb2e7f9c3658e68e64ce6eb51bc12304d8c
+  git+git://github.com/mpmdean/fitting_functions@efd6ab9aab1ba4ddbe5af0dfd0977847f64f4502
