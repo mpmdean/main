@@ -19,7 +19,7 @@ USER root
 RUN apt update
 RUN apt-get install -y --no-install-recommends mesa-common-dev
 USER $NB_UID
-RUN pip install 'pymca==5.5.*'
+RUN pip install 'pymca==5.5.*' 'lxml==4.5.*'
 
 
 # Our packages are installed based on tagged git versions
