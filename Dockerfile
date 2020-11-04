@@ -4,6 +4,7 @@ LABEL maintainer="Mark Dean <mdean@bnl.gov>"
 
 # Packages available via conda
 RUN conda install --quiet --yes \
+    emcee=3.0.* \
     fisx=1.1.* \
     lmfit=1.0.* \
     phonopy=2.6.* \
