@@ -7,7 +7,6 @@ RUN conda install --quiet --yes \
     emcee=3.0.* \
     fisx=1.1.* \
     lmfit=1.0.* \
-    numdifftools=0.9.*\
     phonopy=2.6.* \
     pybroom=0.2 \
     pyfai=0.19.* \
@@ -21,7 +20,7 @@ USER root
 RUN apt update
 RUN apt-get install -y --no-install-recommends mesa-common-dev
 USER $NB_UID
-RUN pip install 'pymca==5.5.*' 'lxml==4.5.*'
+RUN pip install 'pymca==5.5.*' 'lxml==4.5.*' 'numdifftools==0.9.*'
 
 
 # Our packages are installed based on tagged git versions
