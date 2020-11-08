@@ -7,6 +7,7 @@ RUN conda install --quiet --yes \
     emcee=3.0.* \
     fisx=1.1.* \
     lmfit=1.0.* \
+    numdifftools=0.9.*\
     phonopy=2.6.* \
     pybroom=0.2 \
     pyfai=0.19.* \
